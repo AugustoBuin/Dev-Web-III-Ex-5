@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "e31c3fdc-decd-43c7-b363-9cb4fe3447da",
+		"name": "dweb3-ex5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27647861"
+	},
+	"item": [
+		{
+			"name": "busca todos os DISCOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-dweb3}}/discos",
+					"host": [
+						"{{url-dweb3}}"
+					],
+					"path": [
+						"discos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cria DISCO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Kind of Blue\",\r\n    \"artista\": \"Miles Davis\",\r\n    \"ano\": 1959,\r\n    \"genero\": \"Jazz\",\r\n    \"formato\": \"vinil\",\r\n    \"preco\": 129.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-dweb3}}/discos",
+					"host": [
+						"{{url-dweb3}}"
+					],
+					"path": [
+						"discos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza DISCO por ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Kind of Blue\",\r\n    \"artista\": \"Miles Davis\",\r\n    \"ano\": 1959,\r\n    \"genero\": \"Jazz\",\r\n    \"formato\": \"vinil\",\r\n    \"preco\": 130\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-dweb3}}/discos/{{id-disco}}",
+					"host": [
+						"{{url-dweb3}}"
+					],
+					"path": [
+						"discos",
+						"{{id-disco}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleta DISCO por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"Kind of Blue\",\r\n    \"artista\": \"Miles Davis\",\r\n    \"ano\": 1959,\r\n    \"genero\": \"Jazz\",\r\n    \"formato\": \"vinil\",\r\n    \"preco\": 129.9\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url-dweb3}}/discos/{{id-disco}}",
+					"host": [
+						"{{url-dweb3}}"
+					],
+					"path": [
+						"discos",
+						"{{id-disco}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEALTH Request MongoDB",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url-dweb3}}/health",
+					"host": [
+						"{{url-dweb3}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
